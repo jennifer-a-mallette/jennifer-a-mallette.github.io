@@ -1,11 +1,11 @@
 import { WORDS } from "./words.js";
 
-const NUMBER_OF_GUESSES = 9;
-const NUMBER_OF_LETTERS = 5;
+const NUMBER_OF_GUESSES = 10;
+const NUMBER_OF_LETTERS = 8;
 let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
-let rightGuessString = "blond"
+let rightGuessString = "engineer"
 
 console.log(rightGuessString)
 
