@@ -5,7 +5,7 @@ const NUMBER_OF_LETTERS = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
-let rightGuessString = "techno"
+let rightGuessString = "foxrun"
 
 console.log(rightGuessString)
 
