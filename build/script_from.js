@@ -1,11 +1,11 @@
 import { WORDS } from "./words.js";
 
 const NUMBER_OF_GUESSES = 10;
-const NUMBER_OF_LETTERS = 6;
+const NUMBER_OF_LETTERS = 8;
 let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
-let rightGuessString = "foxrun"
+let rightGuessString = "engineer"
 
 console.log(rightGuessString)
 
@@ -73,30 +73,72 @@ function checkGuess () {
     // }
 
     
+    // basically, makes an array to hold the colors, initialized with unfilled
+    // then loops through once (real word), setting green for matched and adding unmatched to a dictionary (k=letter, v=count unmatched)
+    // finally, loops through again (guess), looking for letter in unmatched, and determining yellow and gray, then decrementing accordingly
+    let colors = new Array(NUMBER_OF_LETTERS);
+    let unmatched = {} // unmatched letters for CORRECT word
     for (let i = 0; i < NUMBER_OF_LETTERS; i++) {
-        let letterColor = ''
-        let box = row.children[i]
-        let letter = currentGuess[i]
-        
-        let letterPosition = rightGuess.indexOf(currentGuess[i])
-        // is letter in the correct guess
-        if (letterPosition === -1) {
-            letterColor = 'grey'
-        } else {
-            // now, letter is definitely in word
-            // if letter index and right guess index are the same
-            // letter is in the right position 
-            if (currentGuess[i] === rightGuess[i]) {
-                // shade green 
-                letterColor = 'green'
-            } else {
-                // shade box yellow
-                letterColor = 'yellow'
+        let letter = rightGuess[i];
+
+        if (letter === currentGuess[i]) {
+            colors[i] = 'green'
+        }
+        else if (letter in unmatched) {
+            unmatched[letter] += 1
+        }
+        else {
+            unmatched[letter] = 1
+        }
+    }
+
+    for (let i = 0; i < NUMBER_OF_LETTERS; i++) {
+        let letter = currentGuess[i];
+        // not a green tile
+        if (letter !== rightGuess[i]){
+            // letter is indeed in the word AND count greater than 0
+            if (unmatched[letter]) {
+                colors[i] = 'yellow'
+                unmatched[letter] -= 1
+            }
+            else {
+                colors[i] = 'grey'
             }
 
-            rightGuess[letterPosition] = "#"
         }
+    }
 
+    for (let i = 0; i < NUMBER_OF_LETTERS; i++) {
+        let letterColor = colors[i]
+        let box = row.children[i]
+        let letter = currentGuess[i]
+
+        // old code that doesn't support double letters
+        // let letterColor = ''
+        // let box = row.children[i]
+        // let letter = currentGuess[i]
+        
+        // let letterPosition = rightGuess.indexOf(currentGuess[i])
+        // // is letter in the correct guess
+        // if (letterPosition === -1) {
+        //     letterColor = 'grey'
+        // } else {
+        //     // now, letter is definitely in word
+        //     // if letter index and right guess index are the same
+        //     // letter is in the right position 
+        //     if (currentGuess[i] === rightGuess[i]) {
+        //         // shade green 
+        //         letterColor = 'green'
+        //     } else {
+        //         // check if the letter exists elsewhere
+        //         // shade box yellow
+        //         letterColor = 'yellow'
+        //     }
+
+        //     rightGuess[letterPosition] = "#"
+        // }
+
+        // put this in a different loop to do once you have all the answers
         let delay = 250 * i
         setTimeout(()=> {
             //flip box
