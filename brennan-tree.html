@@ -219,7 +219,8 @@
         nodeBinding: {
             field_0: "relationship",
             field_1: "name",
-            field_2: "bdate"
+            field_2: "bdate",
+            field_3: "id"
         },
         editForm: {
             buttons: {
@@ -296,149 +297,154 @@
         // { id: 0, pids: [], mid: 0, fid: 0, name: "", bdate: "", gender: "" },
         // { id: 0, pids: [], name: "", bdate: "", gender: "" },
         // GENERATION 1
-        { id: 1000, pids: [2000], name: "Daniel Brennan", gender: "male", bdate: "1828 - 1888" },
-        { id: 2000, pids: [1000], name: "Mary Catherine McConnor", gender: "female", bdate: "1856 - 1937" },
+        { id: 1000, pids: [2000], name: "Daniel Brennan", gender: "male", bdate: "1828 - 1888", generation: 1, number: 1 },
+        { id: 2000, pids: [1000], name: "Mary Catherine McConnor", gender: "female", bdate: "1856 - 1937", generation: 1, number:2 },
 
         // GENERATION 2
-        { id: 3000, pids: [4000], mid: 2000, fid: 1000, name: "Simon Brennan", gender: "male", bdate: "1855 - 1939" },
-        { id: 4000, pids: [3000], name: "Mary Frances Glennon", gender: "female", bdate: "1856 - 1937" },
+        { id: 3000, pids: [4000], mid: 2000, fid: 1000, name: "Simon Brennan", gender: "male", bdate: "1855 - 1939", generation: 2, number: 1 },
+        { id: 4000, pids: [3000], name: "Mary Frances Glennon", gender: "female", bdate: "1856 - 1937", generation: 2, number: 2 },
 
         // GENERATION 3
-        { id: 1, pids: [2], mid: 4000, fid: 3000, name: "Francis Aloysius Brennan (Frank)", gender: "male", bdate: "09/27/1884 - 11/27/1945" },
-        { id: 2, pids: [1], name: "Miram Heidnis", gender: "female", bdate: "10/02/1890 - 10/30/1982" },
+        { id: 1, pids: [2], mid: 4000, fid: 3000, name: "Francis Aloysius Brennan (Frank)", gender: "male", bdate: "09/27/1884 - 11/27/1945", generation: 3, number: 1 },
+        { id: 2, pids: [1], name: "Miram Heidnis", gender: "female", bdate: "10/02/1890 - 10/30/1982", generation: 3, number: 2 },
 
         // GENERATION 4
-        { id: 3, pids: [8], mid: 1, fid: 2, name: "Francis Gerard Brennan (Frank)", bdate: "09/14/1921 - 03/12/2010", gender: "male" },
-        { id: 8, pids: [3], name: "Augusta Butcher", gender: "female", bdate: "08/1921 - 03/2011" },
+        { id: 3, pids: [8], mid: 1, fid: 2, name: "Francis Gerard Brennan (Frank)", bdate: "09/14/1921 - 03/12/2010", gender: "male", generation: 4, number: 1 },
+        { id: 8, pids: [3], name: "Augusta Butcher", gender: "female", bdate: "08/1921 - 03/2011", generation: 4, number: 2 },
         
-        { id: 4, mid: 1, fid: 2, name: "Miriam Cecilia Brennan", bdate: "10/05/1922 - 04/15/2013", gender: "female" },
+        { id: 4, mid: 1, fid: 2, name: "Miriam Cecilia Brennan", bdate: "10/05/1922 - 04/15/2013", gender: "female", generation: 4, number: 3 },
 
-        { id: 5, pids: [9], mid: 1, fid: 2, name: "Margaret Patricia Brennan", bdate: "03/17/1925 - 03/30/2012", gender: "female" },
-        { id: 9, pids: [5], name: "John Waldon MacEnroe", gender: "male", bdate: "01/21/1922 - 08/07/2000" },
+        { id: 5, pids: [9], mid: 1, fid: 2, name: "Margaret Patricia Brennan", bdate: "03/17/1925 - 03/30/2012", gender: "female", generation: 4, number: 4 },
+        { id: 9, pids: [5], name: "John Waldon MacEnroe", gender: "male", bdate: "01/21/1922 - 08/07/2000", generation: 4, number: 5 },
 
-        { id: 6, pids: [10], mid: 1, fid: 2, name: "Edward Joseph Brennan", bdate: "09/24/1926 - 01/25/2013", gender: "male" },
-        { id: 10, pids: [6], name: "Mary Prunty", gender: "female", bdate: "" },
+        { id: 6, pids: [10], mid: 1, fid: 2, name: "Edward Joseph Brennan", bdate: "09/24/1926 - 01/25/2013", gender: "male", generation: 4, number: 6 },
+        { id: 10, pids: [6], name: "Mary Prunty", gender: "female", bdate: "", generation: 4, number: 7 },
 
-        { id: 7, pids: [11], mid: 1, fid: 2, name: "John Paul Brennan", bdate: "02/12/1933", gender: "male" },
-        { id: 11, pids: [7], name: "Charmam Ann Kinzelman", gender: "female", bdate: "10/02/1924" },
+        { id: 7, pids: [11], mid: 1, fid: 2, name: "John Paul Brennan", bdate: "02/12/1933", gender: "male", generation: 4, number: 8 },
+        { id: 11, pids: [7], name: "Charmam Ann Kinzelman", gender: "female", bdate: "10/02/1924", generation: 4, number: 9 },
 
         // GENERATION 5
         // 3-8
-        { id: 12, pids: [29], mid: 8, fid: 3, name: "Patricia D. Brennan", bdate: "07/03/1949 - 10/21/2018", gender: "female" },
-        { id: 29, pids: [12], name: "Joseph Driscoll", bdate: "", gender: "male" },
+        { id: 12, pids: [29], mid: 8, fid: 3, name: "Patricia D. Brennan", bdate: "07/03/1949 - 10/21/2018", gender: "female", generation: 5, number: 1 },
+        { id: 29, pids: [12], name: "Joseph Driscoll", bdate: "", gender: "male", generation: 5, number: 2 },
         
-        { id: 13, pids: [30], mid: 8, fid: 3, name: "Frank Gerard Brennan Jr.", bdate: "09/25/1955", gender: "male" },
-        { id: 30, pids: [13], name: "Marie Fleming", bdate: "04/23/1954", gender: "female" },
+        { id: 13, pids: [30], mid: 8, fid: 3, name: "Frank Gerard Brennan Jr.", bdate: "09/25/1955", gender: "male", generation: 5, number: 3 },
+        { id: 30, pids: [13], name: "Marie Fleming", bdate: "04/23/1954", gender: "female", generation: 5, number: 4 },
 
         // 4
-        { id: 14, pids: [], mid: 4, name: "Kathleen P. Connolly", bdate: "10/22/1944", gender: "female" },
+        { id: 14, pids: [], mid: 4, name: "Kathleen P. Connolly", bdate: "10/22/1944", gender: "female", generation: 5, number: 5 },
 
         // 5-9
-        { id: 15, pids: [31], mid: 5, fid: 9, name: "John MacEnroe", bdate: "07/22/1955", gender: "male" },
-        { id: 31, pids: [15], name: "Susan Ferenczy Herd", bdate: "06/06/1957", gender: "female" },
+        { id: 15, pids: [31], mid: 5, fid: 9, name: "John MacEnroe", bdate: "07/22/1955", gender: "male", generation: 5, number: 6 },
+        { id: 31, pids: [15], name: "Susan Ferenczy Herd", bdate: "06/06/1957", gender: "female", generation: 5, number: 7 },
 
-        { id: 16, pids: [32], mid: 5, fid: 9, name: "Patricia Macenroe", bdate: "08/09/1957", gender: "female" },
-        { id: 32, pids: [16], name: "Cliff Wessot", bdate: "03/18/1951", gender: "male" },
+        { id: 16, pids: [32], mid: 5, fid: 9, name: "Patricia Macenroe", bdate: "08/09/1957", gender: "female", generation: 5, number: 8 },
+        { id: 32, pids: [16], name: "Cliff Wessot", bdate: "03/18/1951", gender: "male", generation: 5, number: 9 },
 
-        { id: 17, pids: [], mid: 5, fid: 9, name: "Paul MacEnroe", bdate: "06/14/1959", gender: "male" },
+        { id: 17, pids: [], mid: 5, fid: 9, name: "Paul MacEnroe", bdate: "06/14/1959", gender: "male", generation: 5, number: 10 },
 
-        { id: 18, pids: [33], mid: 5, fid: 9, name: "Maureen Rita MacEnroe", bdate: "06/12/1960", gender: "female" },
-        { id: 33, pids: [18], name: "Samuel James Mallette", bdate: "06/27/1958", gender: "male" },
+        { id: 18, pids: [33], mid: 5, fid: 9, name: "Maureen Rita MacEnroe", bdate: "06/12/1960", gender: "female", generation: 5, number: 11 },
+        { id: 33, pids: [18], name: "Sam Mallette", bdate: "06/27/1958", gender: "male", generation: 5, number: 12 },
 
-        { id: 19, pids: [], mid: 5, fid: 9, name: "Mary MacEnroe", bdate: "04/27/1962", gender: "female" },
+        { id: 19, pids: [], mid: 5, fid: 9, name: "Mary MacEnroe", bdate: "04/27/1962", gender: "female", generation: 5, number: 13 },
 
         // 6-10
-        { id: 20, pids: [34], mid: 10, fid: 6, name: "Miriam A. Brennan", bdate: "08/22/1952", gender: "female" },
-        { id: 34, pids: [20], name: "Keith Pottoff", bdate: "03/14/1952 - 09/28/2013", gender: "male" },
+        { id: 20, pids: [34], mid: 10, fid: 6, name: "Miriam A. Brennan", bdate: "08/22/1952", gender: "female", generation: 5, number: 14 },
+        { id: 34, pids: [20], name: "Keith Pottoff", bdate: "03/14/1952 - 09/28/2013", gender: "male", generation: 5, number: 15 },
 
-        { id: 21, pids: [35], mid: 10, fid: 6, name: "Mary M. Brennan", bdate: "08/07/1953", gender: "female" },
-        { id: 35, pids: [21], name: "Harold Behrens", bdate: "06/04/1953", gender: "male" },
+        { id: 21, pids: [35], mid: 10, fid: 6, name: "Mary M. Brennan", bdate: "08/07/1953", gender: "female", generation: 5, number: 16 },
+        { id: 35, pids: [21], name: "Harold Behrens", bdate: "06/04/1953", gender: "male", generation: 5, number: 17 },
 
-        { id: 22, pids: [36], mid: 10, fid: 6, name: "Edward Brennan Jr.", bdate: "12/20/1954", gender: "male" },
-        { id: 36, pids: [22], name: "Christin Erin McKenna", bdate: "11/16/1957", gender: "female" },
+        { id: 22, pids: [36], mid: 10, fid: 6, name: "Edward Brennan Jr.", bdate: "12/20/1954", gender: "male", generation: 5, number: 18 },
+        { id: 36, pids: [22], name: "Christin Erin McKenna", bdate: "11/16/1957", gender: "female", generation: 5, number: 19 },
 
-        { id: 23, pids: [37], mid: 10, fid: 6, name: "Peter Francis Brennan", bdate: "05/02/1957", gender: "male" },
-        { id: 37, pids: [23], name: "Mary Lynn Yankovich", bdate: "02/11/1967", gender: "female" },
+        { id: 23, pids: [37], mid: 10, fid: 6, name: "Peter Francis Brennan", bdate: "05/02/1957", gender: "male", generation: 5, number: 20 },
+        { id: 37, pids: [23], name: "Mary Lynn Yankovich", bdate: "02/11/1967", gender: "female", generation: 5, number: 21 },
 
-        { id: 24, pids: [38], mid: 10, fid: 6, name: "Virginia Brennan", bdate: "03/20/1959", gender: "female" },
-        { id: 38, pids: [24], name: "Joseph DiSephano", bdate: "06/10/1957", gender: "male" },
+        { id: 24, pids: [38], mid: 10, fid: 6, name: "Virginia Brennan", bdate: "03/20/1959", gender: "female, generation: 5", number: 21 },
+        { id: 38, pids: [24], name: "Joseph DiSephano", bdate: "06/10/1957", gender: "male", generation: 5, number: 22 },
 
-        { id: 25, pids: [39], mid: 10, fid: 6, name: "Kevin Joseph Brennan", bdate: "08/24/1960", gender: "male" },
-        { id: 39, pids: [25], name: "Wendy Chapman", bdate: "03/31/1960", gender: "female" },
+        { id: 25, pids: [39], mid: 10, fid: 6, name: "Kevin Joseph Brennan", bdate: "08/24/1960", gender: "male" , generation: 5, number: 23},
+        { id: 39, pids: [25], name: "Wendy Chapman", bdate: "03/31/1960", gender: "female" , generation: 5, number: 24},
 
-        { id: 26, pids: [40], mid: 10, fid: 6, name: "Catherine Theresa Brennan", bdate: "05/22/1963", gender: "female" },
-        { id: 40, pids: [26], name: "Michael O'Sullivan", bdate: "03/04/1956", gender: "male" },
+        { id: 26, pids: [40], mid: 10, fid: 6, name: "Catherine Theresa Brennan", bdate: "05/22/1963", gender: "female", generation: 5, number: 25 },
+        { id: 40, pids: [26], name: "Michael O'Sullivan", bdate: "03/04/1956", gender: "male" , generation: 5, number: 26},
 
         // 7-11
-        { id: 27, pids: [41], mid: 11, fid: 7, name: "Sarah Kathleen Brennan", bdate: "09/21/1974", gender: "female" },
-        { id: 41, pids: [27], name: "Brad Hameister", bdate: "01/10/1972", gender: "male" },
+        { id: 27, pids: [41], mid: 11, fid: 7, name: "Sarah Kathleen Brennan", bdate: "09/21/1974", gender: "female", generation: 5, number: 27 },
+        { id: 41, pids: [27], name: "Brad Hameister", bdate: "01/10/1972", gender: "male", generation: 5, number: 28 },
 
-        { id: 28, pids: [42], mid: 11, fid: 7, name: "Ian Christian Brennan", bdate: "04/23/1978", gender: "male" },
-        { id: 42, pids: [28], name: "Trilby Glover", bdate: "05/27/1979", gender: "female" },
+        { id: 28, pids: [42], mid: 11, fid: 7, name: "Ian Christian Brennan", bdate: "04/23/1978", gender: "male", generation: 5, number: 29 },
+        { id: 42, pids: [28], name: "Trilby Glover", bdate: "05/27/1979", gender: "female", generation: 5, number: 30 },
 
         // GENERATION 6
         // 12-29
-        { id: 43, pids: [], mid: 12, fid: 29, name: "Shawn Driscoll", bdate: "", gender: "" },
+        { id: 43, pids: [77], mid: 12, fid: 29, name: "Shawn Driscoll", bdate: "", gender: "", generation: 6, number: 1 },
+        { id: 77, pids: [43], name: "Heather Hathorn", bdate: "", gender: "", number: 2 },
 
-        { id: 44, pids: [], mid: 12, fid: 29, name: "Kelly Driscoll", bdate: "", gender: "" },
+        { id: 44, pids: [78], mid: 12, fid: 29, name: "Kelly Driscoll", bdate: "", gender: "", generation: 6, number: 3 },
+        { id: 78, pids: [44], name: "Tim Goguan", bdate: "", gender: "", number: 4 },
         // 13-30
-        { id: 45, pids: [], mid: 30, fid: 13, name: "Elise Brennan", bdate: "", gender: "" },
+        { id: 45, pids: [], mid: 30, fid: 13, name: "Elise Brennan", bdate: "", gender: "", generation: 6, number: 5 },
 
         // 15-31
-        { id: 46, pids: [], mid: 31, fid: 15, name: "Adam Hurd", bdate: "", gender: "" },
+        { id: 46, pids: [79], mid: 31, fid: 15, name: "Adam Hurd", bdate: "", gender: "", generation: 6, number: 6 },
+        { id: 79, pids: [46], name: "Lauren Giordano", bdate: "", gender: "", number: 7 },
 
-        { id: 47, pids: [], mid: 31, fid: 15, name: "Patrick MacEnroe", bdate: "", gender: "" },
-        { id: 48, pids: [], mid: 31, fid: 15, name: "Megan MacEnroe", bdate: "", gender: "" },
+        { id: 47, pids: [], mid: 31, fid: 15, name: "Patrick MacEnroe", bdate: "", gender: "", generation: 6 , number: 8},
+        { id: 48, pids: [], mid: 31, fid: 15, name: "Megan MacEnroe", bdate: "", gender: "", generation: 6, number: 9 },
 
         // 17
-        { id: 49, pids: [], fid: 17, name: "Alex MacEnroe", bdate: "", gender: "" },
+        { id: 49, pids: [], fid: 17, name: "Alex MacEnroe", bdate: "", gender: "", generation: 6, number: 10 },
 
         // 18-33
-        { id: 50, pids: [], mid: 18, fid: 33, name: "Jennifer Alexis Mallette", bdate: "08/23/1994", gender: "female" },
+        { id: 50, pids: [], mid: 18, fid: 33, name: "Jennifer Alexis Mallette", bdate: "08/23/1994", gender: "female", generation: 6, number: 11 },
 
         // 20-34
-        { id: 51, pids: [], mid: 20, fid: 34, name: "Nicole Pottoff", bdate: "", gender: "" },
-        { id: 52, pids: [], mid: 20, fid: 34, name: "Lauren Pottoff", bdate: "", gender: "" },
-        { id: 53, pids: [], mid: 20, fid: 34, name: "Tara Pottoff", bdate: "", gender: "" },
-        { id: 54, pids: [], mid: 20, fid: 34, name: "Jacqueline Pottoff", bdate: "", gender: "" },
-        { id: 55, pids: [], mid: 20, fid: 34, name: "Philip Potoff", bdate: "", gender: "" },
-        { id: 56, pids: [], mid: 20, fid: 34, name: "Michael Potoff", bdate: "", gender: "" },
+        { id: 51, pids: [], mid: 20, fid: 34, name: "Nicole Pottoff", bdate: "", gender: "", generation: 6 },
+        { id: 52, pids: [], mid: 20, fid: 34, name: "Lauren Pottoff", bdate: "", gender: "", generation: 6 },
+        { id: 53, pids: [], mid: 20, fid: 34, name: "Tara Pottoff", bdate: "", gender: "", generation: 6 },
+        { id: 54, pids: [], mid: 20, fid: 34, name: "Jacqueline Pottoff", bdate: "", gender: "", generation: 6 },
+        { id: 55, pids: [], mid: 20, fid: 34, name: "Philip Potoff", bdate: "", gender: "", generation: 6 },
+        { id: 56, pids: [], mid: 20, fid: 34, name: "Michael Potoff", bdate: "", gender: "", generation: 6 },
 
         // 21-35
-        { id: 57, pids: [], mid: 21, fid: 35, name: "Kevin Behrens", bdate: "", gender: "" },
-        { id: 58, pids: [], mid: 21, fid: 35, name: "Gregory Behrens", bdate: "", gender: "" },
-        { id: 59, pids: [], mid: 21, fid: 35, name: "Kelly Behrens", bdate: "", gender: "" },
+        { id: 57, pids: [], mid: 21, fid: 35, name: "Kevin Behrens", bdate: "", gender: "", generation: 6 },
+        { id: 58, pids: [], mid: 21, fid: 35, name: "Gregory Behrens", bdate: "", gender: "", generation: 6 },
+        { id: 59, pids: [], mid: 21, fid: 35, name: "Kelly Behrens", bdate: "", gender: "", generation: 6 },
 
         // 22-36
-        { id: 60, pids: [], mid: 36, fid: 22, name: "Jonathon Brennan", bdate: "", gender: "" },
-        { id: 61, pids: [], mid: 36, fid: 22, name: "Ryan Brennan", bdate: "", gender: "" },
-        { id: 62, pids: [], mid: 36, fid: 22, name: "Emily Brennan", bdate: "", gender: "" },
-        { id: 63, pids: [], mid: 36, fid: 22, name: "Elizabeth Brennan", bdate: "", gender: "" },
+        { id: 60, pids: [], mid: 36, fid: 22, name: "Jonathon Brennan", bdate: "", gender: "", generation: 6 },
+        { id: 61, pids: [], mid: 36, fid: 22, name: "Ryan Brennan", bdate: "", gender: "", generation: 6 },
+        { id: 62, pids: [], mid: 36, fid: 22, name: "Emily Brennan", bdate: "", gender: "", generation: 6 },
+        { id: 63, pids: [], mid: 36, fid: 22, name: "Elizabeth Brennan", bdate: "", gender: "", generation: 6 },
 
         // 23-37
-        { id: 64, pids: [], mid: 37, fid: 23, name: "Brett Joseph Brennan", bdate: "", gender: "" },
-        { id: 65, pids: [], mid: 37, fid: 23, name: "Scott Aiden Brennan", bdate: "", gender: "" },
+        { id: 64, pids: [], mid: 37, fid: 23, name: "Brett Joseph Brennan", bdate: "", gender: "", generation: 6 },
+        { id: 65, pids: [], mid: 37, fid: 23, name: "Scott Aiden Brennan", bdate: "", gender: "" , generation: 6},
 
         // 24-38
-        { id: 66, pids: [], mid: 24, fid: 38, name: "Danielle DiSephano", bdate: "", gender: "" },
-        { id: 67, pids: [], mid: 24, fid: 38, name: "Teresa DiSephano", bdate: "", gender: "" },
+        { id: 66, pids: [], mid: 24, fid: 38, name: "Danielle DiSephano", bdate: "", gender: "", generation: 6 },
+        { id: 67, pids: [], mid: 24, fid: 38, name: "Teresa DiSephano", bdate: "", gender: "" , generation: 6},
 
         // 25-39
-        { id: 68, pids: [], mid: 39, fid: 25, name: "Matthew Brenna", bdate: "", gender: "" },
-        { id: 69, pids: [], mid: 39, fid: 25, name: "Kevin Patrick Brennan", bdate: "", gender: "" },
-        { id: 70, pids: [], mid: 39, fid: 25, name: "Patrick Edward Brennan", bdate: "", gender: "" },
+        { id: 68, pids: [], mid: 39, fid: 25, name: "Matthew Brenna", bdate: "", gender: "" , generation: 6},
+        { id: 69, pids: [], mid: 39, fid: 25, name: "Kevin Patrick Brennan", bdate: "", gender: "" , generation: 6},
+        { id: 70, pids: [], mid: 39, fid: 25, name: "Patrick Edward Brennan", bdate: "", gender: "" , generation: 6},
 
         // 26-40
-        { id: 71, pids: [], mid: 26, fid: 40, name: "Michael O'Sullivan", bdate: "", gender: "" },
-        { id: 72, pids: [], mid: 26, fid: 40, name: "Kieran O'Sullivan", bdate: "", gender: "" },
-        { id: 73, pids: [], mid: 26, fid: 40, name: "Mary Catherine O'Sullivan", bdate: "", gender: "" },
+        { id: 71, pids: [], mid: 26, fid: 40, name: "Michael O'Sullivan", bdate: "", gender: "", generation: 6 },
+        { id: 72, pids: [], mid: 26, fid: 40, name: "Kieran O'Sullivan", bdate: "", gender: "" , generation: 6},
+        { id: 73, pids: [], mid: 26, fid: 40, name: "Mary Catherine O'Sullivan", bdate: "", gender: "", generation: 6 },
 
         // 27-41
-        { id: 74, pids: [], mid: 27, fid: 41, name: "Everleigh Miriam Hameister", bdate: "", gender: "" },
+        { id: 74, pids: [], mid: 27, fid: 41, name: "Everleigh Miriam Hameister", bdate: "", gender: "", generation: 6 },
 
         // 28-42
-        { id: 75, pids: [], mid: 42, fid: 28, name: "Blaise August Brennan", bdate: "", gender: "" },
-        { id: 76, pids: [], mid: 42, fid: 28, name: "Juno Avril Brennan", bdate: "", gender: "" },
+        { id: 75, pids: [], mid: 42, fid: 28, name: "Blaise August Brennan", bdate: "", gender: "" , generation: 6},
+        { id: 76, pids: [], mid: 42, fid: 28, name: "Juno Avril Brennan", bdate: "", gender: "", generation: 6 },
+
+        // GENERATION 7
 
     ]);
 
